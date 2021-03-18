@@ -24,5 +24,35 @@ namespace Server_Kontrolpanel
         {
             InitializeComponent();
         }
+
+        private void Server1Reboot_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Server1Info_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Server2Reboot_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Server2Info_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Server3Reboot_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Server3Info_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
