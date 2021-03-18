@@ -5,8 +5,10 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Server_Kontrolpanel"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="1000">
+        Title="MainWindow" Height="350" Width="1000" 
+        WindowStartupLocation="CenterScreen">
     <Grid Margin="50">
+        <!--Rectangle-->
         <Rectangle Width="250" Height="250" Fill="DarkGray"
                    VerticalAlignment="Top" HorizontalAlignment="Left"/>
         <Rectangle Width="250" Height="250" Fill="DarkGray"
@@ -14,6 +16,7 @@
         <Rectangle Width="250" Height="250" Fill="DarkGray"
                    VerticalAlignment="Top" HorizontalAlignment="Right"/>
 
+        <!--TextBlock Server Name-->
         <TextBlock Name="Server1" Height="40" Width="250"
                    FontSize="22" Text="Martins server"
                    VerticalAlignment="Top" HorizontalAlignment="Left"
@@ -27,6 +30,7 @@
                    VerticalAlignment="Top" HorizontalAlignment="Right"
                    TextAlignment="Center" FontWeight="DemiBold"/>
 
+        <!--TextBlack Status-->
         <TextBlock Text="Status" FontSize="20" Height="50" Width="75"
                    VerticalAlignment="Top" HorizontalAlignment="Left"
                    Margin="10,40,0,0" FontWeight="DemiBold"/>
@@ -37,6 +41,7 @@
                    VerticalAlignment="Top" HorizontalAlignment="Right"
                    Margin="0,40,160,0" FontWeight="DemiBold"/>
 
+        <!--TextBlock IP-->
         <TextBlock Text="IP:" FontSize="20" Height="50" Width="20"
                    VerticalAlignment="Center" HorizontalAlignment="Left"
                    Margin="10,0,0,0" FontWeight="DemiBold"/>
@@ -47,6 +52,7 @@
                    VerticalAlignment="Center" HorizontalAlignment="Right"
                    Margin="0,0,210,0" FontWeight="DemiBold"/>
 
+        <!--Ellipse Status-->
         <Ellipse Name="Status1" Height="25" Width="25" Fill="Gray"
                  VerticalAlignment="Top" HorizontalAlignment="Left"
                  Margin="215,45,0,0"/>
@@ -57,6 +63,7 @@
                  VerticalAlignment="Top" HorizontalAlignment="Right"
                  Margin="0,45,10,0"/>
 
+        <!--TextBlock IP Numbers-->
         <TextBlock Name="IP1" Height="50" Width="160"
                    VerticalAlignment="Center" HorizontalAlignment="Left"
                    Text="80.167.81.52" FontSize="20" Margin="80,0,0,0"
@@ -70,27 +77,35 @@
                    Text="80.167.81.52" FontSize="20" Margin="80,0,0,0"
                    TextAlignment="Right"/>
 
+        <!--Button Reboot-->
         <Button Name="Server1Reboot" Content="Reboot"
                 Height="40" Width="80" Background="Gray"
                 Foreground="White" VerticalAlignment="Bottom"
-                HorizontalAlignment="Left" Margin="20,0,0,10" Click="Server1Reboot_Click"/>
+                HorizontalAlignment="Left" Margin="20,0,0,10" 
+                Click="Server1Reboot_Click"/>
         <Button Name="Server2Reboot" Content="Reboot"
                 Height="40" Width="80" Background="Gray"
                 Foreground="White" VerticalAlignment="Bottom"
-                HorizontalAlignment="Center" Margin="0,0,120,10" Click="Server2Reboot_Click"/>
+                HorizontalAlignment="Center" Margin="0,0,120,10" 
+                Click="Server2Reboot_Click"/>
         <Button Name="Server3Reboot" Content="Reboot"
                 Height="40" Width="80" Background="Gray"
                 Foreground="White" VerticalAlignment="Bottom"
-                HorizontalAlignment="Right" Margin="0,0,150,10" Click="Server3Reboot_Click"/>
+                HorizontalAlignment="Right" Margin="0,0,150,10" 
+                Click="Server3Reboot_Click"/>
 
+        <!--Button Info-->
         <Button Name="Server1Info" Content="More Info" Width="80"
                 Height="40" HorizontalAlignment="Left" VerticalAlignment="Bottom"
-                Margin="150,0,0,10" Background="Gray" Foreground="White" Click="Server1Info_Click"/>
+                Margin="150,0,0,10" Background="Gray" Foreground="White" 
+                Click="Server1Info_Click"/>
         <Button Name="Server2Info" Content="More Info" Width="80"
                 Height="40" HorizontalAlignment="Center" VerticalAlignment="Bottom"
-                Margin="150,0,0,10" Background="Gray" Foreground="White" Click="Server2Info_Click"/>
+                Margin="150,0,0,10" Background="Gray" Foreground="White" 
+                Click="Server2Info_Click"/>
         <Button Name="Server3Info" Content="More Info" Width="80"
                 Height="40" HorizontalAlignment="Right" VerticalAlignment="Bottom"
-                Margin="0,0,10,10" Background="Gray" Foreground="White" Click="Server3Info_Click"/>
+                Margin="0,0,10,10" Background="Gray" Foreground="White" 
+                Click="Server3Info_Click"/>
     </Grid>
 </Window>
