@@ -18,8 +18,7 @@
 
         <!--TextBlock Server Name-->
         <TextBlock Name="Server1" Height="40" Width="250"
-                   FontSize="22" Text="Martins server"
-                   VerticalAlignment="Top" HorizontalAlignment="Left"
+                   FontSize="22" VerticalAlignment="Top" HorizontalAlignment="Left"
                    TextAlignment="Center" FontWeight="DemiBold"/>
         <TextBlock Name="Server2" Height="40" Width="250"
                    FontSize="22" Text="Mads' server"
@@ -53,13 +52,13 @@
                    Margin="0,0,210,0" FontWeight="DemiBold"/>
 
         <!--Ellipse Status-->
-        <Ellipse Name="Status1" Height="25" Width="25" Fill="Gray"
+        <Ellipse Name="Status1" Height="25" Width="25" Fill="Red"
                  VerticalAlignment="Top" HorizontalAlignment="Left"
                  Margin="215,45,0,0"/>
-        <Ellipse Name="Status2" Height="25" Width="25" Fill="Gray"
+        <Ellipse Name="Status2" Height="25" Width="25" Fill="Red"
                  VerticalAlignment="Top" HorizontalAlignment="Center"
                  Margin="210,45,0,0"/>
-        <Ellipse Name="Status3" Height="25" Width="25" Fill="Gray"
+        <Ellipse Name="Status3" Height="25" Width="25" Fill="Red"
                  VerticalAlignment="Top" HorizontalAlignment="Right"
                  Margin="0,45,10,0"/>
 
@@ -79,31 +78,43 @@
 
         <!--Button Reboot-->
         <Button Name="Server1Reboot" Content="Reboot"
-                Height="40" Width="80" Background="Gray"
+                Height="40" Width="60" Background="Gray"
                 Foreground="White" VerticalAlignment="Bottom"
                 HorizontalAlignment="Left" Margin="20,0,0,10" 
                 Click="Server1Reboot_Click"/>
         <Button Name="Server2Reboot" Content="Reboot"
-                Height="40" Width="80" Background="Gray"
+                Height="40" Width="60" Background="Gray"
                 Foreground="White" VerticalAlignment="Bottom"
-                HorizontalAlignment="Center" Margin="0,0,120,10" 
+                HorizontalAlignment="Center" Margin="0,0,160,10" 
                 Click="Server2Reboot_Click"/>
         <Button Name="Server3Reboot" Content="Reboot"
-                Height="40" Width="80" Background="Gray"
+                Height="40" Width="60" Background="Gray"
                 Foreground="White" VerticalAlignment="Bottom"
-                HorizontalAlignment="Right" Margin="0,0,150,10" 
+                HorizontalAlignment="Right" Margin="0,0,170,10" 
                 Click="Server3Reboot_Click"/>
 
+        <!--Button Edit-->
+        <Button Name="Edit1" Content="Edit" Height="40" Width="60"
+                VerticalAlignment="Bottom" HorizontalAlignment="Left"
+                Margin="100,0,0,10" Background="Gray" Foreground="White"
+                Click="Edit1_Click"/>
+        <Button Name="Edit2" Content="Edit" Height="40" Width="60"
+                VerticalAlignment="Bottom" HorizontalAlignment="Center"
+                Margin="0,0,0,10" Background="Gray" Foreground="White" Click="Edit2_Click"/>
+        <Button Name="Edit3" Content="Edit" Height="40" Width="60"
+                VerticalAlignment="Bottom" HorizontalAlignment="Right"
+                Margin="0,0,90,10" Background="Gray" Foreground="White" Click="Edit3_Click"/>
+
         <!--Button Info-->
-        <Button Name="Server1Info" Content="More Info" Width="80"
+        <Button Name="Server1Info" Content="More Info" Width="60"
                 Height="40" HorizontalAlignment="Left" VerticalAlignment="Bottom"
-                Margin="150,0,0,10" Background="Gray" Foreground="White" 
+                Margin="180,0,0,10" Background="Gray" Foreground="White" 
                 Click="Server1Info_Click"/>
-        <Button Name="Server2Info" Content="More Info" Width="80"
+        <Button Name="Server2Info" Content="More Info" Width="60"
                 Height="40" HorizontalAlignment="Center" VerticalAlignment="Bottom"
-                Margin="150,0,0,10" Background="Gray" Foreground="White" 
+                Margin="160,0,0,10" Background="Gray" Foreground="White" 
                 Click="Server2Info_Click"/>
-        <Button Name="Server3Info" Content="More Info" Width="80"
+        <Button Name="Server3Info" Content="More Info" Width="60"
                 Height="40" HorizontalAlignment="Right" VerticalAlignment="Bottom"
                 Margin="0,0,10,10" Background="Gray" Foreground="White" 
                 Click="Server3Info_Click"/>
