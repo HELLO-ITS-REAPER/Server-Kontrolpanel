@@ -70,13 +70,12 @@ namespace Server_Kontrolpanel
                             upTime.Execute();
                             ram.Execute();
                             disk.Execute();
+
                             Dispatcher.Invoke(() => servername.Content = rr.Result);
                             Dispatcher.Invoke(() => uptime.Content = upTime.Result);
-
                             Dispatcher.Invoke(() => Ram.Content = ram.Result);
                             Dispatcher.Invoke(() => Disk.Content = disk.Result);
                             Dispatcher.Invoke(() => process.Items.Add(sc.Result));
-
                         }
                         Thread.Sleep(1000);
                         client.Disconnect();
