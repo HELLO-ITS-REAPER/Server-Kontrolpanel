@@ -30,7 +30,7 @@ namespace Server_Kontrolpanel
         {
             InitializeComponent();
 
-            
+
 
             client1.Connect();
             client2.Connect();
@@ -85,16 +85,20 @@ namespace Server_Kontrolpanel
         {
             client1.Connect();
 
+
             if (client1.IsConnected)
             {
                 client1.RunCommand("reboot");
-                MessageBox.Show("Reboot complete");
-                client1.Disconnect();
 
+                client1.Disconnect();
+                Status1.Fill = Brushes.Red;
+                Thread.Sleep(2000);
+                MessageBox.Show("Reboot complete");
+                Status1.Fill = Brushes.Green;
             }
             else
             {
-                Status1.Fill = Brushes.Red;
+                Status1.Fill = Brushes.Yellow;
                 MessageBox.Show("Unable to reboot");
             }
         }
@@ -121,16 +125,20 @@ namespace Server_Kontrolpanel
         {
             client2.Connect();
 
+
             if (client2.IsConnected)
             {
                 client2.RunCommand("reboot");
-                MessageBox.Show("Reboot complete");
-                client2.Disconnect();
 
+                client2.Disconnect();
+                Status2.Fill = Brushes.Red;
+                Thread.Sleep(2000);
+                MessageBox.Show("Reboot complete");
+                Status2.Fill = Brushes.Green;
             }
             else
             {
-                Status2.Fill = Brushes.Red;
+                Status2.Fill = Brushes.Yellow;
                 MessageBox.Show("Unable to reboot");
             }
         }
@@ -151,23 +159,27 @@ namespace Server_Kontrolpanel
                 Status2.Fill = Brushes.Red;
                 MessageBox.Show("Lost connection...");
             }
-            
+
         }
 
         private void Server3Reboot_Click(object sender, RoutedEventArgs e)
         {
             client3.Connect();
 
+
             if (client3.IsConnected)
             {
                 client3.RunCommand("reboot");
-                MessageBox.Show("Reboot complete");
+                
                 client3.Disconnect();
-
+                Status3.Fill = Brushes.Red;
+                Thread.Sleep(2000);
+                MessageBox.Show("Reboot complete");
+                Status3.Fill = Brushes.Green;
             }
             else
             {
-                Status3.Fill = Brushes.Red;
+                Status3.Fill = Brushes.Yellow;
                 MessageBox.Show("Unable to reboot");
             }
         }
