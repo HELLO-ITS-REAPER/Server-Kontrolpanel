@@ -58,7 +58,31 @@ namespace Server_Kontrolpanel
 
         private void Server2Reboot_Click(object sender, RoutedEventArgs e)
         {
+            try
+            {
+                var client = new SshClient("95.179.187.146", "root", "$s8PtAa)uEZW{H[2");
+                client.Connect();
 
+                if (client.IsConnected)
+                {
+                    Status1.Fill = Brushes.Red;
+                    client.RunCommand("reboot");
+                    MessageBox.Show("Rebooting...");
+                    Status1.Fill = Brushes.Green;
+                    MessageBox.Show("Reboot complete");
+                    client.Disconnect();
+
+                }
+                else
+                {
+                    Status1.Fill = Brushes.Red;
+                    MessageBox.Show("Unable to reboot");
+                }
+            }
+
+            catch
+            {
+            }
         }
 
         private void Server2Info_Click(object sender, RoutedEventArgs e)
@@ -78,19 +102,19 @@ namespace Server_Kontrolpanel
 
         private void Edit1_Click(object sender, RoutedEventArgs e)
         {
-            Edit edit = new Edit();
+            Edit1 edit = new Edit1();
             edit.Show();
         }
 
         private void Edit2_Click(object sender, RoutedEventArgs e)
         {
-            Edit edit = new Edit();
+            Edit1 edit = new Edit1();
             edit.Show();
         }
 
         private void Edit3_Click(object sender, RoutedEventArgs e)
         {
-            Edit edit = new Edit();
+            Edit1 edit = new Edit1();
             edit.Show();
         }
     }

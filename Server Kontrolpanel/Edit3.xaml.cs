@@ -15,21 +15,18 @@ using System.Windows.Shapes;
 namespace Server_Kontrolpanel
 {
     /// <summary>
-    /// Interaction logic for Edit.xaml
+    /// Interaction logic for Edit3.xaml
     /// </summary>
-    public partial class Edit : Window
+    public partial class Edit3 : Window
     {
-        public Edit()
+        public Edit3()
         {
             InitializeComponent();
         }
 
-        string name;
-        string ip;
         private void Save_Click(object sender, RoutedEventArgs e)
         {
-            name = NameInput.Text;
-            ip = IPInput.Text;
+
         }
     }
 }
