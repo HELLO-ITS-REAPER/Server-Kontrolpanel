@@ -83,7 +83,20 @@ namespace Server_Kontrolpanel
 
         private void Server1Reboot_Click(object sender, RoutedEventArgs e)
         {
-            
+            client1.Connect();
+
+            if (client1.IsConnected)
+            {
+                client1.RunCommand("reboot");
+                MessageBox.Show("Reboot complete");
+                client1.Disconnect();
+
+            }
+            else
+            {
+                Status1.Fill = Brushes.Red;
+                MessageBox.Show("Unable to reboot");
+            }
         }
 
         private void Server1Info_Click(object sender, RoutedEventArgs e)
@@ -106,30 +119,19 @@ namespace Server_Kontrolpanel
 
         private void Server2Reboot_Click(object sender, RoutedEventArgs e)
         {
-            try
+            client2.Connect();
+
+            if (client2.IsConnected)
             {
-                var client = new SshClient("95.179.187.146", "root", "$s8PtAa)uEZW{H[2");
-                client.Connect();
+                client2.RunCommand("reboot");
+                MessageBox.Show("Reboot complete");
+                client2.Disconnect();
 
-                if (client.IsConnected)
-                {
-                    Status1.Fill = Brushes.Red;
-                    client.RunCommand("reboot");
-                    MessageBox.Show("Rebooting...");
-                    Status1.Fill = Brushes.Green;
-                    MessageBox.Show("Reboot complete");
-                    client.Disconnect();
-
-                }
-                else
-                {
-                    Status1.Fill = Brushes.Red;
-                    MessageBox.Show("Unable to reboot");
-                }
             }
-
-            catch
+            else
             {
+                Status2.Fill = Brushes.Red;
+                MessageBox.Show("Unable to reboot");
             }
         }
 
@@ -146,7 +148,7 @@ namespace Server_Kontrolpanel
             }
             catch (Exception)
             {
-                Status1.Fill = Brushes.Red;
+                Status2.Fill = Brushes.Red;
                 MessageBox.Show("Lost connection...");
             }
             
@@ -154,7 +156,20 @@ namespace Server_Kontrolpanel
 
         private void Server3Reboot_Click(object sender, RoutedEventArgs e)
         {
+            client3.Connect();
 
+            if (client3.IsConnected)
+            {
+                client3.RunCommand("reboot");
+                MessageBox.Show("Reboot complete");
+                client3.Disconnect();
+
+            }
+            else
+            {
+                Status3.Fill = Brushes.Red;
+                MessageBox.Show("Unable to reboot");
+            }
         }
 
         private void Server3Info_Click(object sender, RoutedEventArgs e)
@@ -170,7 +185,7 @@ namespace Server_Kontrolpanel
             }
             catch (Exception)
             {
-                Status1.Fill = Brushes.Red;
+                Status3.Fill = Brushes.Red;
                 MessageBox.Show("Lost connection...");
             }
         }

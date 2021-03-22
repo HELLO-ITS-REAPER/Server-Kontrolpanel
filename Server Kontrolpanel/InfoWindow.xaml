@@ -31,6 +31,8 @@
         <Label Name="Disk" HorizontalAlignment="Left" Margin="211,89,0,0" VerticalAlignment="Top" Grid.Column="1"/>
         <Label Name="Ram" HorizontalAlignment="Left" Margin="211,120,0,0" VerticalAlignment="Top" Grid.Column="1"/>
         <Label Name="Cpu" HorizontalAlignment="Left" Margin="211,151,0,0" VerticalAlignment="Top" Grid.Column="1"/>
+        <Label Content="MB" Margin="0,0,80,145" Grid.Column="1" VerticalContentAlignment="Center"
+               HorizontalAlignment="Right"/>
 
     </Grid>
 </Window>
