@@ -1,4 +1,4 @@
-﻿<Window x:Class="Server_Kontrolpanel.Window1"
+﻿<Window x:Class="Server_Kontrolpanel.InfoWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
@@ -27,7 +27,7 @@
         <Label Content="Ram" HorizontalAlignment="Left" Margin="60,120,0,0" VerticalAlignment="Top"/>
         <Label Content="Cpu" HorizontalAlignment="Left" Margin="60,151,0,0" VerticalAlignment="Top"/>
         <Label Content="Process" HorizontalAlignment="Left" Margin="60,182,0,0" VerticalAlignment="Top"/>
-        <Label Name="uptime" HorizontalAlignment="Left" Margin="211,58,0,0" VerticalAlignment="Top" Grid.Column="1"/>
+        <Label Name="uptime" HorizontalContentAlignment="Right" HorizontalAlignment="Left" Margin="211,58,0,0" VerticalAlignment="Top" Grid.Column="1"/>
         <Label Name="Disk" HorizontalAlignment="Left" Margin="211,89,0,0" VerticalAlignment="Top" Grid.Column="1"/>
         <Label Name="Ram" HorizontalAlignment="Left" Margin="211,120,0,0" VerticalAlignment="Top" Grid.Column="1"/>
         <Label Name="Cpu" HorizontalAlignment="Left" Margin="211,151,0,0" VerticalAlignment="Top" Grid.Column="1"/>

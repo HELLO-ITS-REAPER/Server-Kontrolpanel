@@ -17,15 +17,14 @@
                    VerticalAlignment="Top" HorizontalAlignment="Right"/>
 
         <!--TextBlock Server Name-->
-        <TextBlock Name="Server1" Height="40" Width="250"
+        <TextBlock Name="Server1" Text="CentOS" Height="40" Width="250"
                    FontSize="22" VerticalAlignment="Top" HorizontalAlignment="Left"
                    TextAlignment="Center" FontWeight="DemiBold"/>
-        <TextBlock Name="Server2" Height="40" Width="250"
-                   FontSize="22" Text="Mads' server"
-                   VerticalAlignment="Top" HorizontalAlignment="Center"
+        <TextBlock Name="Server2" Text="Ubuntu 20" Height="40" Width="250"
+                   FontSize="22" VerticalAlignment="Top" HorizontalAlignment="Center"
                    TextAlignment="Center" FontWeight="DemiBold"/>
         <TextBlock Name="Server3" Height="40" Width="250"
-                   FontSize="22" Text="Tredje server"
+                   FontSize="22" Text="Debian 10"
                    VerticalAlignment="Top" HorizontalAlignment="Right"
                    TextAlignment="Center" FontWeight="DemiBold"/>
 
@@ -65,15 +64,15 @@
         <!--TextBlock IP Numbers-->
         <TextBlock Name="IP1" Height="50" Width="160"
                    VerticalAlignment="Center" HorizontalAlignment="Left"
-                   Text="80.167.81.52" FontSize="20" Margin="80,0,0,0"
+                   Text="95.179.187.146" FontSize="20" Margin="80,0,0,0"
                    TextAlignment="Right"/>
         <TextBlock Name="IP2" Height="50" Width="160"
                    VerticalAlignment="Center" HorizontalAlignment="Center"
-                   Text="80.167.81.52" FontSize="20" Margin="80,0,0,0"
+                   Text="45.76.43.221" FontSize="20" Margin="80,0,0,0"
                    TextAlignment="Right"/>
         <TextBlock Name="IP3" Height="50" Width="160"
                    VerticalAlignment="Center" HorizontalAlignment="Right"
-                   Text="80.167.81.52" FontSize="20" Margin="80,0,0,0"
+                   Text="45.32.232.37" FontSize="20" Margin="80,0,0,0"
                    TextAlignment="Right"/>
 
         <!--Button Reboot-->
@@ -92,18 +91,6 @@
                 Foreground="White" VerticalAlignment="Bottom"
                 HorizontalAlignment="Right" Margin="0,0,170,10" 
                 Click="Server3Reboot_Click"/>
-
-        <!--Button Edit-->
-        <Button Name="Edit1" Content="Edit" Height="40" Width="60"
-                VerticalAlignment="Bottom" HorizontalAlignment="Left"
-                Margin="100,0,0,10" Background="Gray" Foreground="White"
-                Click="Edit1_Click"/>
-        <Button Name="Edit2" Content="Edit" Height="40" Width="60"
-                VerticalAlignment="Bottom" HorizontalAlignment="Center"
-                Margin="0,0,0,10" Background="Gray" Foreground="White" Click="Edit2_Click"/>
-        <Button Name="Edit3" Content="Edit" Height="40" Width="60"
-                VerticalAlignment="Bottom" HorizontalAlignment="Right"
-                Margin="0,0,90,10" Background="Gray" Foreground="White" Click="Edit3_Click"/>
 
         <!--Button Info-->
         <Button Name="Server1Info" Content="More Info" Width="60"

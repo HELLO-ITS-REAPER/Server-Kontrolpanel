@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -54,6 +55,30 @@ namespace Server_Kontrolpanel
 
                 Status3.Fill = Brushes.Gray;
             }
+            client1.Disconnect();
+            client2.Disconnect();
+            client3.Disconnect();
+        }
+
+        private void RunServer1()
+        {
+            InfoWindow rr = new InfoWindow("95.179.187.146", "root", "$s8PtAa)uEZW{H[2");
+            rr.Show();
+            System.Windows.Threading.Dispatcher.Run();
+        }
+
+        private void RunServer2()
+        {
+            InfoWindow rr = new InfoWindow("45.76.43.221", "root", "j}7E(Ma38tMg8_ux");
+            rr.Show();
+            System.Windows.Threading.Dispatcher.Run();
+        }
+
+        private void RunServer3()
+        {
+            InfoWindow rr = new InfoWindow("45.32.232.37", "root", "!Tz53@_BJ(RCdXk@");
+            rr.Show();
+            System.Windows.Threading.Dispatcher.Run();
         }
 
         private void Server1Reboot_Click(object sender, RoutedEventArgs e)
@@ -63,9 +88,20 @@ namespace Server_Kontrolpanel
 
         private void Server1Info_Click(object sender, RoutedEventArgs e)
         {
-            Window1 rr = new Window1();
-            rr.Show();
-            rr.info1();
+            try
+            {
+                client1.Connect();
+                client1.Disconnect();
+                Thread thread = new Thread(RunServer1);
+                thread.IsBackground = true;
+                thread.SetApartmentState(ApartmentState.STA);
+                thread.Start();
+            }
+            catch (Exception)
+            {
+                Status1.Fill = Brushes.Red;
+                MessageBox.Show("Lost connection...");
+            }
         }
 
         private void Server2Reboot_Click(object sender, RoutedEventArgs e)
@@ -99,10 +135,21 @@ namespace Server_Kontrolpanel
 
         private void Server2Info_Click(object sender, RoutedEventArgs e)
         {
-
-            Window1 rr = new Window1();
-            rr.Show();
-            rr.info3();
+            try
+            {
+                client2.Connect();
+                client2.Disconnect();
+                Thread thread = new Thread(RunServer2);
+                thread.IsBackground = true;
+                thread.SetApartmentState(ApartmentState.STA);
+                thread.Start();
+            }
+            catch (Exception)
+            {
+                Status1.Fill = Brushes.Red;
+                MessageBox.Show("Lost connection...");
+            }
+            
         }
 
         private void Server3Reboot_Click(object sender, RoutedEventArgs e)
@@ -112,28 +159,20 @@ namespace Server_Kontrolpanel
 
         private void Server3Info_Click(object sender, RoutedEventArgs e)
         {
-
-            Window1 rr = new Window1();
-            rr.Show();
-            rr.info3();
-        }
-
-        private void Edit1_Click(object sender, RoutedEventArgs e)
-        {
-            Edit1 edit = new Edit1();
-            edit.Show();
-        }
-
-        private void Edit2_Click(object sender, RoutedEventArgs e)
-        {
-            Edit1 edit = new Edit1();
-            edit.Show();
-        }
-
-        private void Edit3_Click(object sender, RoutedEventArgs e)
-        {
-            Edit1 edit = new Edit1();
-            edit.Show();
+            try
+            {
+                client3.Connect();
+                client3.Disconnect();
+                Thread thread = new Thread(RunServer3);
+                thread.IsBackground = true;
+                thread.SetApartmentState(ApartmentState.STA);
+                thread.Start();
+            }
+            catch (Exception)
+            {
+                Status1.Fill = Brushes.Red;
+                MessageBox.Show("Lost connection...");
+            }
         }
     }
 }
