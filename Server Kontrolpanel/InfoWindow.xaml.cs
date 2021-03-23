@@ -27,7 +27,6 @@ namespace Server_Kontrolpanel
         public InfoWindow(string ip, string userName, string password)
         {
             InitializeComponent();
-
             Ip = ip;
             UserName = userName;
             Password = password;

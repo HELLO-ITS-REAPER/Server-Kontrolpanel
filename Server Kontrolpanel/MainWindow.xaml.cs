@@ -88,8 +88,7 @@ namespace Server_Kontrolpanel
 
             if (client1.IsConnected)
             {
-                client1.RunCommand("reboot");
-
+                client1.RunCommand("Reboot");
                 client1.Disconnect();
                 Status1.Fill = Brushes.Red;
                 Thread.Sleep(2000);
@@ -128,7 +127,7 @@ namespace Server_Kontrolpanel
 
             if (client2.IsConnected)
             {
-                client2.RunCommand("reboot");
+                client2.RunCommand("Reboot");
 
                 client2.Disconnect();
                 Status2.Fill = Brushes.Red;
@@ -169,7 +168,7 @@ namespace Server_Kontrolpanel
 
             if (client3.IsConnected)
             {
-                client3.RunCommand("reboot");
+                client3.RunCommand("Reboot");
                 
                 client3.Disconnect();
                 Status3.Fill = Brushes.Red;
